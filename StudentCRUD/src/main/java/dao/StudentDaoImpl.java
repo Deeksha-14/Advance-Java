@@ -122,6 +122,63 @@ public class StudentDaoImpl implements StudentDao {
 		return mesg;
 	}
 	
+	@Override
+	public String changeCourseByName(String firstName, Course enrolledCourse) {
+		Session session = getFactory().getCurrentSession();
+		String mesg = "Bulk Updation failed";
+		String jpql = "update Student s set s.enrolledCourse = :crs where s.firstName = :fName";
+		
+		
+		
+		Transaction txn = session.beginTransaction();
+		try {
+			int updateCount = session.createQuery(jpql).setParameter("crs", enrolledCourse).setParameter("fName", firstName).executeUpdate();
+			
+			
+			txn.commit();
+			mesg =updateCount+"emps info updated";
+		}catch(RuntimeException e) {
+			if(txn!=null)
+				txn.rollback();
+			throw e;
+		}
+		
+		
+		
+		return mesg;
+	}
+
+	@Override
+	public String deleteById(int studentId) {
+		Session session = getFactory().getCurrentSession();
+		String mesg = "delete by id : ";
+		Transaction txn = session.beginTransaction();
+		
+		Student stud = null;
+		
+		try
+		{
+			
+			stud = session.get(Student.class, studentId);
+			
+			if(stud != null)
+			{
+			session.delete(stud);
+			}
+			txn.commit();
+			mesg="Deletion successful";
+		}catch(Exception e)
+		{
+			if(txn != null)
+				txn.rollback();
+			throw e;
+		}
+		
+		return mesg;
+	}
+
+
+	
 	
 	
 
