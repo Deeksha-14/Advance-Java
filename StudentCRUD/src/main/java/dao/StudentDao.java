@@ -19,6 +19,11 @@ public interface StudentDao {
 	String changeCourse(int studentId, Course enrolledCourse);
 	
 	//change course; ip firstname, courseName
+	String changeCourseByName(String firstName, Course enrolledCourse);
+	
+	//delete by id using API
+	String deleteById(int studentId);
+	
 	
 	
 
