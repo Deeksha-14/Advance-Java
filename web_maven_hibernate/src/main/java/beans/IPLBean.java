@@ -1,10 +1,6 @@
 package beans;
-
-
 import java.util.List;
-
 import org.hibernate.HibernateException;
-
 import dao.teamDaoImpl;
 import pojos.Team;
 
