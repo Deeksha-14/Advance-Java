@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
-
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -12,7 +11,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import dao.ProductDaoImpl;
 import pojos.product;
 
@@ -32,8 +30,7 @@ public class ProductServlet extends HttpServlet {
 
 		try {
 			dao = new ProductDaoImpl();
-		} catch (Exception e) {
-			
+		} catch (Exception e) {	
 			throw new ServletException("err in init"+getClass(), e);
 		}
 		
@@ -64,7 +61,7 @@ public class ProductServlet extends HttpServlet {
 				pw.print(p);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			throw new ServletException("err in do get");
+			throw new ServletException("err in do get"+getClass()+" "+e);
 		}
 		
 	}
