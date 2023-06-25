@@ -9,9 +9,8 @@ private int quantity1;
 
 
 public product() {
-	// TODO Auto-generated constructor stub
+	
 }
-
 
 public product(int id, String desc1, String name1, double price1, int quantity1) {
 	super();
