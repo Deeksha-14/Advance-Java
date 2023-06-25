@@ -39,8 +39,6 @@ public class EmployeeController {
 		return "/emp/list";//AVN : /WEB-INF/views/emp/list.jsp
 	}
 	
-	
-	//
 	@GetMapping("/signin")
 	public String showLoginForm()
 	{
@@ -59,10 +57,6 @@ public class EmployeeController {
 		}else {
 			map.addAttribute("emps_dtls",emp);
 			return "/emp/details";
-		}
-		
+		}	
 	}
-	
-	
-	
 }
