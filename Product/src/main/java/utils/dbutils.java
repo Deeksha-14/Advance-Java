@@ -9,7 +9,8 @@ public class dbutils {
 	private static Connection cn;
 	
 	public static Connection openConnection() throws SQLException
-	{String dburl = "jdbc:mysql://localhost:3306/advjava2?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true";
+	{	
+		String dburl = "jdbc:mysql://localhost:3306/advjava2?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true";
 		cn = DriverManager.getConnection(dburl, "root", "root123");
 		System.out.println("db cn established");
 		return cn;
