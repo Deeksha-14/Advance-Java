@@ -2,14 +2,12 @@ package dao;
 
 import static utils.dbutils.closeConnection;
 import static utils.dbutils.openConnection;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import pojos.product;
 
 public class ProductDaoImpl implements ProductDao {
