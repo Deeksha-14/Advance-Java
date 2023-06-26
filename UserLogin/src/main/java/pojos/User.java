@@ -1,5 +1,5 @@
 package pojos;
-//id | first_name | last_name | email             | password | dob        | status | role  |
+//id | first_name | last_name | email | password | dob | status | role  |
 
 import java.sql.Date;
 
