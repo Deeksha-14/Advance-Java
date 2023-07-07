@@ -64,7 +64,7 @@ public class CoachingController {
 	@PutMapping
 	public Course update(@RequestBody Course detachedCourse)
 	{
-		System.out.println("in update course"+detachedCourse);
+		System.out.println("in update course : "+detachedCourse);
 		return courseService.updateCourse(detachedCourse);
 	}
 	
