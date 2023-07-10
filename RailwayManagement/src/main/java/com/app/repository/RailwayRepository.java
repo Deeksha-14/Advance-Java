@@ -12,4 +12,5 @@ import com.app.entities.Railway;
 public interface RailwayRepository extends JpaRepository<Railway, Long> {
 	
 	Optional<Railway> findByCategory(CategoryE category);
+	
 }
