@@ -51,7 +51,7 @@ public class RailwayServiceImpl implements RailwayService {
 			return new ApiResponse("rail is deleted"+railId);
 		}
 		
-		return new ApiResponse("rail cant be deleted1");
+		return new ApiResponse("rail does not exists!");
 	}
 
 
